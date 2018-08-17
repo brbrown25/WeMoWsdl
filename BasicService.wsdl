@@ -279,4 +279,1227 @@
     </wsdl:port>
   </wsdl:service>
 
+</wsdl:definitions><wsdl:definitions 
+xmlns:u="urn:Belkin:service:basicevent:1" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema 
+    targetNamespace="urn:Belkin:service:basicevent:1" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:element name="SetBinaryState">
+        <xsd:complexType>
+          <xsd:all>
+            <xsd:element name="BinaryState" type="xsd:string"/>
+            <xsd:element name="Duration" type="xsd:string"/>
+            <xsd:element name="EndAction" type="xsd:string"/>
+            <xsd:element name="UDN" type="xsd:string"/>
+            <xsd:element name="CountdownEndTime" type="xsd:string"/>
+            <xsd:element name="deviceCurrentTime" type="xsd:string"/>
+          </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="SetBinaryStateResponse">
+        <xsd:complexType>
+          <xsd:all>
+            <xsd:element name="BinaryState" type="xsd:string"/>
+            <xsd:element name="Duration" type="xsd:string"/>
+            <xsd:element name="EndAction" type="xsd:string"/>
+            <xsd:element name="UDN" type="xsd:string"/>
+            <xsd:element name="CountdownEndTime" type="xsd:string"/>
+            <xsd:element name="deviceCurrentTime" type="xsd:string"/>
+          </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="UpdateInsightHomeSettings">
+        <xsd:complexType>
+          <xsd:all>
+            <xsd:element name="EnergyPerUnitCost" type="xsd:string"/>
+            <xsd:element name="Currency" type="xsd:string"/>
+            <xsd:element name="EnergyPerUnitCostVersion" type="xsd:string"/>
+          </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="UpdateInsightHomeSettingsResponse">
+        <xsd:complexType>
+          <xsd:all>
+            <xsd:element name="EnergyPerUnitCost" type="xsd:string"/>
+            <xsd:element name="Currency" type="xsd:string"/>
+            <xsd:element name="EnergyPerUnitCostVersion" type="xsd:string"/>
+          </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="SetInsightHomeSettings">
+        <xsd:complexType>
+          <xsd:all>
+            <xsd:element name="EnergyPerUnitCost" type="xsd:string"/>
+            <xsd:element name="Currency" type="xsd:string"/>
+          </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="SetInsightHomeSettingsResponse">
+        <xsd:complexType>
+          <xsd:all>
+            <xsd:element name="EnergyPerUnitCost" type="xsd:string"/>
+            <xsd:element name="Currency" type="xsd:string"/>
+          </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetInsightHomeSettings">
+        <xsd:complexType>
+          <xsd:all>
+            <xsd:element name="HomeSettingsVersion" type="xsd:string"/>
+            <xsd:element name="EnergyPerUnitCost" type="xsd:string"/>
+            <xsd:element name="Currency" type="xsd:string"/>
+          </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetInsightHomeSettingsResponse">
+        <xsd:complexType>
+          <xsd:all>
+            <xsd:element name="HomeSettingsVersion" type="xsd:string"/>
+            <xsd:element name="EnergyPerUnitCost" type="xsd:string"/>
+            <xsd:element name="Currency" type="xsd:string"/>
+          </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="SetLogLevelOption">
+        <xsd:complexType>
+          <xsd:all>
+            <xsd:element name="Level" type="xsd:string"/>
+            <xsd:element name="Option" type="xsd:string"/>
+          </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="SetLogLevelOptionResponse">
+        <xsd:complexType>
+          <xsd:all>
+            <xsd:element name="Level" type="xsd:string"/>
+            <xsd:element name="Option" type="xsd:string"/>
+          </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetFriendlyName">
+        <xsd:complexType>
+          <xsd:all>
+            <xsd:element name="FriendlyName" type="xsd:string"/>
+          </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetFriendlyNameResponse">
+        <xsd:complexType>
+          <xsd:all>
+            <xsd:element name="FriendlyName" type="xsd:string"/>
+          </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ReSetup">
+        <xsd:complexType>
+          <xsd:all>
+            <xsd:element name="Reset" type="xsd:string"/>
+          </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ReSetupResponse">
+        <xsd:complexType>
+          <xsd:all>
+            <xsd:element name="Reset" type="xsd:string"/>
+          </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="SetHomeId">
+        <xsd:complexType>
+          <xsd:all>
+            <xsd:element name="HomeId" type="xsd:string"/>
+          </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="SetHomeIdResponse">
+        <xsd:complexType>
+          <xsd:all>
+            <xsd:element name="HomeId" type="xsd:string"/>
+          </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetHomeId">
+        <xsd:complexType>
+          <xsd:all> </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetHomeIdResponse">
+        <xsd:complexType>
+          <xsd:all> </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetHomeInfo">
+        <xsd:complexType>
+          <xsd:all> </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetHomeInfoResponse">
+        <xsd:complexType>
+          <xsd:all> </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="SetDeviceId">
+        <xsd:complexType>
+          <xsd:all>
+            <xsd:element name="SetDeviceId" type="xsd:string"/>
+          </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="SetDeviceIdResponse">
+        <xsd:complexType>
+          <xsd:all>
+            <xsd:element name="SetDeviceId" type="xsd:string"/>
+          </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetDeviceId">
+        <xsd:complexType>
+          <xsd:all> </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetDeviceIdResponse">
+        <xsd:complexType>
+          <xsd:all> </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetMacAddr">
+        <xsd:complexType>
+          <xsd:all> </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetMacAddrResponse">
+        <xsd:complexType>
+          <xsd:all> </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetSerialNo">
+        <xsd:complexType>
+          <xsd:all> </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetSerialNoResponse">
+        <xsd:complexType>
+          <xsd:all> </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetPluginUDN">
+        <xsd:complexType>
+          <xsd:all> </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetPluginUDNResponse">
+        <xsd:complexType>
+          <xsd:all> </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetSmartDevInfo">
+        <xsd:complexType>
+          <xsd:all> </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetSmartDevInfoResponse">
+        <xsd:complexType>
+          <xsd:all> </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ShareHWInfo">
+        <xsd:complexType>
+          <xsd:all>
+            <xsd:element name="Mac" type="xsd:string"/>
+            <xsd:element name="Serial" type="xsd:string"/>
+            <xsd:element name="Udn" type="xsd:string"/>
+            <xsd:element name="RestoreState" type="xsd:string"/>
+            <xsd:element name="HomeId" type="xsd:string"/>
+            <xsd:element name="PluginKey" type="xsd:string"/>
+          </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ShareHWInfoResponse">
+        <xsd:complexType>
+          <xsd:all>
+            <xsd:element name="Mac" type="xsd:string"/>
+            <xsd:element name="Serial" type="xsd:string"/>
+            <xsd:element name="Udn" type="xsd:string"/>
+            <xsd:element name="RestoreState" type="xsd:string"/>
+            <xsd:element name="HomeId" type="xsd:string"/>
+            <xsd:element name="PluginKey" type="xsd:string"/>
+          </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ChangeFriendlyName">
+        <xsd:complexType>
+          <xsd:all>
+            <xsd:element name="FriendlyName" type="xsd:string"/>
+          </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ChangeFriendlyNameResponse">
+        <xsd:complexType>
+          <xsd:all>
+            <xsd:element name="FriendlyName" type="xsd:string"/>
+          </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="SetSmartDevInfo">
+        <xsd:complexType>
+          <xsd:all>
+            <xsd:element name="SmartDevURL" type="xsd:string"/>
+          </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="SetSmartDevInfoResponse">
+        <xsd:complexType>
+          <xsd:all>
+            <xsd:element name="SmartDevURL" type="xsd:string"/>
+          </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetRuleOverrideStatus">
+        <xsd:complexType>
+          <xsd:all>
+            <xsd:element name="RuleOverrideStatus" type="xsd:string"/>
+          </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetRuleOverrideStatusResponse">
+        <xsd:complexType>
+          <xsd:all>
+            <xsd:element name="RuleOverrideStatus" type="xsd:string"/>
+          </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetDeviceIcon">
+        <xsd:complexType>
+          <xsd:all>
+            <xsd:element name="DeviceIcon" type="xsd:string"/>
+          </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetDeviceIconResponse">
+        <xsd:complexType>
+          <xsd:all>
+            <xsd:element name="DeviceIcon" type="xsd:string"/>
+          </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetIconURL">
+        <xsd:complexType>
+          <xsd:all>
+            <xsd:element name="URL" type="xsd:string"/>
+          </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetIconURLResponse">
+        <xsd:complexType>
+          <xsd:all>
+            <xsd:element name="URL" type="xsd:string"/>
+          </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetLogFileURL">
+        <xsd:complexType>
+          <xsd:all>
+            <xsd:element name="LOGURL" type="xsd:string"/>
+          </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetLogFileURLResponse">
+        <xsd:complexType>
+          <xsd:all>
+            <xsd:element name="LOGURL" type="xsd:string"/>
+          </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ChangeDeviceIcon">
+        <xsd:complexType>
+          <xsd:all>
+            <xsd:element name="PictureSize" type="xsd:string"/>
+            <xsd:element name="PictureHeight" type="xsd:string"/>
+            <xsd:element name="PictureColorDeep" type="xsd:string"/>
+          </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ChangeDeviceIconResponse">
+        <xsd:complexType>
+          <xsd:all>
+            <xsd:element name="PictureSize" type="xsd:string"/>
+            <xsd:element name="PictureHeight" type="xsd:string"/>
+            <xsd:element name="PictureColorDeep" type="xsd:string"/>
+          </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetBinaryState">
+        <xsd:complexType>
+          <xsd:all>
+            <xsd:element name="BinaryState" type="xsd:string"/>
+          </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetBinaryStateResponse">
+        <xsd:complexType>
+          <xsd:all>
+            <xsd:element name="BinaryState" type="xsd:string"/>
+          </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="SetMultiState">
+        <xsd:complexType>
+          <xsd:all>
+            <xsd:element name="state" type="xsd:string"/>
+            <xsd:element name="state" type="xsd:string"/>
+            <xsd:element name="state" type="xsd:string"/>
+          </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="SetMultiStateResponse">
+        <xsd:complexType>
+          <xsd:all>
+            <xsd:element name="state" type="xsd:string"/>
+            <xsd:element name="state" type="xsd:string"/>
+            <xsd:element name="state" type="xsd:string"/>
+          </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="SetCrockpotState">
+        <xsd:complexType>
+          <xsd:all>
+            <xsd:element name="mode" type="xsd:string"/>
+            <xsd:element name="time" type="xsd:string"/>
+          </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="SetCrockpotStateResponse">
+        <xsd:complexType>
+          <xsd:all>
+            <xsd:element name="mode" type="xsd:string"/>
+            <xsd:element name="time" type="xsd:string"/>
+          </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetCrockpotState">
+        <xsd:complexType>
+          <xsd:all>
+            <xsd:element name="mode" type="xsd:string"/>
+            <xsd:element name="time" type="xsd:string"/>
+          </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetCrockpotStateResponse">
+        <xsd:complexType>
+          <xsd:all>
+            <xsd:element name="mode" type="xsd:string"/>
+            <xsd:element name="time" type="xsd:string"/>
+          </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetWatchdogFile">
+        <xsd:complexType>
+          <xsd:all>
+            <xsd:element name="WDFile" type="xsd:string"/>
+          </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetWatchdogFileResponse">
+        <xsd:complexType>
+          <xsd:all>
+            <xsd:element name="WDFile" type="xsd:string"/>
+          </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetSignalStrength">
+        <xsd:complexType>
+          <xsd:all>
+            <xsd:element name="SignalStrength" type="xsd:string"/>
+          </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetSignalStrengthResponse">
+        <xsd:complexType>
+          <xsd:all>
+            <xsd:element name="SignalStrength" type="xsd:string"/>
+          </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="SetServerEnvironment">
+        <xsd:complexType>
+          <xsd:all>
+            <xsd:element name="ServerEnvironment" type="xsd:string"/>
+            <xsd:element name="TurnServerEnvironment" type="xsd:string"/>
+            <xsd:element name="ServerEnvironmentType" type="xsd:string"/>
+          </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="SetServerEnvironmentResponse">
+        <xsd:complexType>
+          <xsd:all>
+            <xsd:element name="ServerEnvironment" type="xsd:string"/>
+            <xsd:element name="TurnServerEnvironment" type="xsd:string"/>
+            <xsd:element name="ServerEnvironmentType" type="xsd:string"/>
+          </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetServerEnvironment">
+        <xsd:complexType>
+          <xsd:all>
+            <xsd:element name="ServerEnvironment" type="xsd:string"/>
+            <xsd:element name="TurnServerEnvironment" type="xsd:string"/>
+            <xsd:element name="ServerEnvironmentType" type="xsd:string"/>
+          </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetServerEnvironmentResponse">
+        <xsd:complexType>
+          <xsd:all>
+            <xsd:element name="ServerEnvironment" type="xsd:string"/>
+            <xsd:element name="TurnServerEnvironment" type="xsd:string"/>
+            <xsd:element name="ServerEnvironmentType" type="xsd:string"/>
+          </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetIconVersion">
+        <xsd:complexType>
+          <xsd:all>
+            <xsd:element name="IconVersion" type="xsd:string"/>
+          </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetIconVersionResponse">
+        <xsd:complexType>
+          <xsd:all>
+            <xsd:element name="IconVersion" type="xsd:string"/>
+          </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetSimulatedRuleData">
+        <xsd:complexType>
+          <xsd:all> </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetSimulatedRuleDataResponse">
+        <xsd:complexType>
+          <xsd:all> </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="NotifyManualToggle">
+        <xsd:complexType>
+          <xsd:all> </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="NotifyManualToggleResponse">
+        <xsd:complexType>
+          <xsd:all> </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ControlCloudUpload">
+        <xsd:complexType>
+          <xsd:all>
+            <xsd:element name="EnableUpload" type="xsd:string"/>
+          </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ControlCloudUploadResponse">
+        <xsd:complexType>
+          <xsd:all>
+            <xsd:element name="EnableUpload" type="xsd:string"/>
+          </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+</xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="SetBinaryStateInputMessage">
+    <wsdl:part name="SetBinaryStateInputPart" element="u:SetBinaryState"/>
+  </wsdl:message>
+  <wsdl:message name="SetBinaryStateOutputMessage">
+    <wsdl:part name="SetBinaryStateOutputPart" element="u:SetBinaryStateResponse"/>
+  </wsdl:message>
+  <wsdl:message name="UpdateInsightHomeSettingsInputMessage">
+    <wsdl:part name="UpdateInsightHomeSettingsInputPart" element="u:UpdateInsightHomeSettings"/>
+  </wsdl:message>
+  <wsdl:message name="UpdateInsightHomeSettingsOutputMessage">
+    <wsdl:part 
+    name="UpdateInsightHomeSettingsOutputPart" element="u:UpdateInsightHomeSettingsResponse">
+</wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="SetInsightHomeSettingsInputMessage">
+    <wsdl:part name="SetInsightHomeSettingsInputPart" element="u:SetInsightHomeSettings"/>
+  </wsdl:message>
+  <wsdl:message name="SetInsightHomeSettingsOutputMessage">
+    <wsdl:part name="SetInsightHomeSettingsOutputPart" element="u:SetInsightHomeSettingsResponse"/>
+  </wsdl:message>
+  <wsdl:message name="GetInsightHomeSettingsInputMessage">
+    <wsdl:part name="GetInsightHomeSettingsInputPart" element="u:GetInsightHomeSettings"/>
+  </wsdl:message>
+  <wsdl:message name="GetInsightHomeSettingsOutputMessage">
+    <wsdl:part name="GetInsightHomeSettingsOutputPart" element="u:GetInsightHomeSettingsResponse"/>
+  </wsdl:message>
+  <wsdl:message name="SetLogLevelOptionInputMessage">
+    <wsdl:part name="SetLogLevelOptionInputPart" element="u:SetLogLevelOption"/>
+  </wsdl:message>
+  <wsdl:message name="SetLogLevelOptionOutputMessage">
+    <wsdl:part name="SetLogLevelOptionOutputPart" element="u:SetLogLevelOptionResponse"/>
+  </wsdl:message>
+  <wsdl:message name="GetFriendlyNameInputMessage">
+    <wsdl:part name="GetFriendlyNameInputPart" element="u:GetFriendlyName"/>
+  </wsdl:message>
+  <wsdl:message name="GetFriendlyNameOutputMessage">
+    <wsdl:part name="GetFriendlyNameOutputPart" element="u:GetFriendlyNameResponse"/>
+  </wsdl:message>
+  <wsdl:message name="ReSetupInputMessage">
+    <wsdl:part name="ReSetupInputPart" element="u:ReSetup"/>
+  </wsdl:message>
+  <wsdl:message name="ReSetupOutputMessage">
+    <wsdl:part name="ReSetupOutputPart" element="u:ReSetupResponse"/>
+  </wsdl:message>
+  <wsdl:message name="SetHomeIdInputMessage">
+    <wsdl:part name="SetHomeIdInputPart" element="u:SetHomeId"/>
+  </wsdl:message>
+  <wsdl:message name="SetHomeIdOutputMessage">
+    <wsdl:part name="SetHomeIdOutputPart" element="u:SetHomeIdResponse"/>
+  </wsdl:message>
+  <wsdl:message name="GetHomeIdInputMessage">
+    <wsdl:part name="GetHomeIdInputPart" element="u:GetHomeId"/>
+  </wsdl:message>
+  <wsdl:message name="GetHomeIdOutputMessage">
+    <wsdl:part name="GetHomeIdOutputPart" element="u:GetHomeIdResponse"/>
+  </wsdl:message>
+  <wsdl:message name="GetHomeInfoInputMessage">
+    <wsdl:part name="GetHomeInfoInputPart" element="u:GetHomeInfo"/>
+  </wsdl:message>
+  <wsdl:message name="GetHomeInfoOutputMessage">
+    <wsdl:part name="GetHomeInfoOutputPart" element="u:GetHomeInfoResponse"/>
+  </wsdl:message>
+  <wsdl:message name="SetDeviceIdInputMessage">
+    <wsdl:part name="SetDeviceIdInputPart" element="u:SetDeviceId"/>
+  </wsdl:message>
+  <wsdl:message name="SetDeviceIdOutputMessage">
+    <wsdl:part name="SetDeviceIdOutputPart" element="u:SetDeviceIdResponse"/>
+  </wsdl:message>
+  <wsdl:message name="GetDeviceIdInputMessage">
+    <wsdl:part name="GetDeviceIdInputPart" element="u:GetDeviceId"/>
+  </wsdl:message>
+  <wsdl:message name="GetDeviceIdOutputMessage">
+    <wsdl:part name="GetDeviceIdOutputPart" element="u:GetDeviceIdResponse"/>
+  </wsdl:message>
+  <wsdl:message name="GetMacAddrInputMessage">
+    <wsdl:part name="GetMacAddrInputPart" element="u:GetMacAddr"/>
+  </wsdl:message>
+  <wsdl:message name="GetMacAddrOutputMessage">
+    <wsdl:part name="GetMacAddrOutputPart" element="u:GetMacAddrResponse"/>
+  </wsdl:message>
+  <wsdl:message name="GetSerialNoInputMessage">
+    <wsdl:part name="GetSerialNoInputPart" element="u:GetSerialNo"/>
+  </wsdl:message>
+  <wsdl:message name="GetSerialNoOutputMessage">
+    <wsdl:part name="GetSerialNoOutputPart" element="u:GetSerialNoResponse"/>
+  </wsdl:message>
+  <wsdl:message name="GetPluginUDNInputMessage">
+    <wsdl:part name="GetPluginUDNInputPart" element="u:GetPluginUDN"/>
+  </wsdl:message>
+  <wsdl:message name="GetPluginUDNOutputMessage">
+    <wsdl:part name="GetPluginUDNOutputPart" element="u:GetPluginUDNResponse"/>
+  </wsdl:message>
+  <wsdl:message name="GetSmartDevInfoInputMessage">
+    <wsdl:part name="GetSmartDevInfoInputPart" element="u:GetSmartDevInfo"/>
+  </wsdl:message>
+  <wsdl:message name="GetSmartDevInfoOutputMessage">
+    <wsdl:part name="GetSmartDevInfoOutputPart" element="u:GetSmartDevInfoResponse"/>
+  </wsdl:message>
+  <wsdl:message name="ShareHWInfoInputMessage">
+    <wsdl:part name="ShareHWInfoInputPart" element="u:ShareHWInfo"/>
+  </wsdl:message>
+  <wsdl:message name="ShareHWInfoOutputMessage">
+    <wsdl:part name="ShareHWInfoOutputPart" element="u:ShareHWInfoResponse"/>
+  </wsdl:message>
+  <wsdl:message name="ChangeFriendlyNameInputMessage">
+    <wsdl:part name="ChangeFriendlyNameInputPart" element="u:ChangeFriendlyName"/>
+  </wsdl:message>
+  <wsdl:message name="ChangeFriendlyNameOutputMessage">
+    <wsdl:part name="ChangeFriendlyNameOutputPart" element="u:ChangeFriendlyNameResponse"/>
+  </wsdl:message>
+  <wsdl:message name="SetSmartDevInfoInputMessage">
+    <wsdl:part name="SetSmartDevInfoInputPart" element="u:SetSmartDevInfo"/>
+  </wsdl:message>
+  <wsdl:message name="SetSmartDevInfoOutputMessage">
+    <wsdl:part name="SetSmartDevInfoOutputPart" element="u:SetSmartDevInfoResponse"/>
+  </wsdl:message>
+  <wsdl:message name="GetRuleOverrideStatusInputMessage">
+    <wsdl:part name="GetRuleOverrideStatusInputPart" element="u:GetRuleOverrideStatus"/>
+  </wsdl:message>
+  <wsdl:message name="GetRuleOverrideStatusOutputMessage">
+    <wsdl:part name="GetRuleOverrideStatusOutputPart" element="u:GetRuleOverrideStatusResponse"/>
+  </wsdl:message>
+  <wsdl:message name="GetDeviceIconInputMessage">
+    <wsdl:part name="GetDeviceIconInputPart" element="u:GetDeviceIcon"/>
+  </wsdl:message>
+  <wsdl:message name="GetDeviceIconOutputMessage">
+    <wsdl:part name="GetDeviceIconOutputPart" element="u:GetDeviceIconResponse"/>
+  </wsdl:message>
+  <wsdl:message name="GetIconURLInputMessage">
+    <wsdl:part name="GetIconURLInputPart" element="u:GetIconURL"/>
+  </wsdl:message>
+  <wsdl:message name="GetIconURLOutputMessage">
+    <wsdl:part name="GetIconURLOutputPart" element="u:GetIconURLResponse"/>
+  </wsdl:message>
+  <wsdl:message name="GetLogFileURLInputMessage">
+    <wsdl:part name="GetLogFileURLInputPart" element="u:GetLogFileURL"/>
+  </wsdl:message>
+  <wsdl:message name="GetLogFileURLOutputMessage">
+    <wsdl:part name="GetLogFileURLOutputPart" element="u:GetLogFileURLResponse"/>
+  </wsdl:message>
+  <wsdl:message name="ChangeDeviceIconInputMessage">
+    <wsdl:part name="ChangeDeviceIconInputPart" element="u:ChangeDeviceIcon"/>
+  </wsdl:message>
+  <wsdl:message name="ChangeDeviceIconOutputMessage">
+    <wsdl:part name="ChangeDeviceIconOutputPart" element="u:ChangeDeviceIconResponse"/>
+  </wsdl:message>
+  <wsdl:message name="GetBinaryStateInputMessage">
+    <wsdl:part name="GetBinaryStateInputPart" element="u:GetBinaryState"/>
+  </wsdl:message>
+  <wsdl:message name="GetBinaryStateOutputMessage">
+    <wsdl:part name="GetBinaryStateOutputPart" element="u:GetBinaryStateResponse"/>
+  </wsdl:message>
+  <wsdl:message name="SetMultiStateInputMessage">
+    <wsdl:part name="SetMultiStateInputPart" element="u:SetMultiState"/>
+  </wsdl:message>
+  <wsdl:message name="SetMultiStateOutputMessage">
+    <wsdl:part name="SetMultiStateOutputPart" element="u:SetMultiStateResponse"/>
+  </wsdl:message>
+  <wsdl:message name="SetCrockpotStateInputMessage">
+    <wsdl:part name="SetCrockpotStateInputPart" element="u:SetCrockpotState"/>
+  </wsdl:message>
+  <wsdl:message name="SetCrockpotStateOutputMessage">
+    <wsdl:part name="SetCrockpotStateOutputPart" element="u:SetCrockpotStateResponse"/>
+  </wsdl:message>
+  <wsdl:message name="GetCrockpotStateInputMessage">
+    <wsdl:part name="GetCrockpotStateInputPart" element="u:GetCrockpotState"/>
+  </wsdl:message>
+  <wsdl:message name="GetCrockpotStateOutputMessage">
+    <wsdl:part name="GetCrockpotStateOutputPart" element="u:GetCrockpotStateResponse"/>
+  </wsdl:message>
+  <wsdl:message name="GetWatchdogFileInputMessage">
+    <wsdl:part name="GetWatchdogFileInputPart" element="u:GetWatchdogFile"/>
+  </wsdl:message>
+  <wsdl:message name="GetWatchdogFileOutputMessage">
+    <wsdl:part name="GetWatchdogFileOutputPart" element="u:GetWatchdogFileResponse"/>
+  </wsdl:message>
+  <wsdl:message name="GetSignalStrengthInputMessage">
+    <wsdl:part name="GetSignalStrengthInputPart" element="u:GetSignalStrength"/>
+  </wsdl:message>
+  <wsdl:message name="GetSignalStrengthOutputMessage">
+    <wsdl:part name="GetSignalStrengthOutputPart" element="u:GetSignalStrengthResponse"/>
+  </wsdl:message>
+  <wsdl:message name="SetServerEnvironmentInputMessage">
+    <wsdl:part name="SetServerEnvironmentInputPart" element="u:SetServerEnvironment"/>
+  </wsdl:message>
+  <wsdl:message name="SetServerEnvironmentOutputMessage">
+    <wsdl:part name="SetServerEnvironmentOutputPart" element="u:SetServerEnvironmentResponse"/>
+  </wsdl:message>
+  <wsdl:message name="GetServerEnvironmentInputMessage">
+    <wsdl:part name="GetServerEnvironmentInputPart" element="u:GetServerEnvironment"/>
+  </wsdl:message>
+  <wsdl:message name="GetServerEnvironmentOutputMessage">
+    <wsdl:part name="GetServerEnvironmentOutputPart" element="u:GetServerEnvironmentResponse"/>
+  </wsdl:message>
+  <wsdl:message name="GetIconVersionInputMessage">
+    <wsdl:part name="GetIconVersionInputPart" element="u:GetIconVersion"/>
+  </wsdl:message>
+  <wsdl:message name="GetIconVersionOutputMessage">
+    <wsdl:part name="GetIconVersionOutputPart" element="u:GetIconVersionResponse"/>
+  </wsdl:message>
+  <wsdl:message name="GetSimulatedRuleDataInputMessage">
+    <wsdl:part name="GetSimulatedRuleDataInputPart" element="u:GetSimulatedRuleData"/>
+  </wsdl:message>
+  <wsdl:message name="GetSimulatedRuleDataOutputMessage">
+    <wsdl:part name="GetSimulatedRuleDataOutputPart" element="u:GetSimulatedRuleDataResponse"/>
+  </wsdl:message>
+  <wsdl:message name="NotifyManualToggleInputMessage">
+    <wsdl:part name="NotifyManualToggleInputPart" element="u:NotifyManualToggle"/>
+  </wsdl:message>
+  <wsdl:message name="NotifyManualToggleOutputMessage">
+    <wsdl:part name="NotifyManualToggleOutputPart" element="u:NotifyManualToggleResponse"/>
+  </wsdl:message>
+  <wsdl:message name="ControlCloudUploadInputMessage">
+    <wsdl:part name="ControlCloudUploadInputPart" element="u:ControlCloudUpload"/>
+  </wsdl:message>
+  <wsdl:message name="ControlCloudUploadOutputMessage">
+    <wsdl:part name="ControlCloudUploadOutputPart" element="u:ControlCloudUploadResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="BasicServicePortType">
+    <wsdl:operation name="SetBinaryState">
+      <wsdl:input message="SetBinaryStateInputMessage"/>
+      <wsdl:output message="SetBinaryStateOutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateInsightHomeSettings">
+      <wsdl:input message="UpdateInsightHomeSettingsInputMessage"/>
+      <wsdl:output message="UpdateInsightHomeSettingsOutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="SetInsightHomeSettings">
+      <wsdl:input message="SetInsightHomeSettingsInputMessage"/>
+      <wsdl:output message="SetInsightHomeSettingsOutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetInsightHomeSettings">
+      <wsdl:input message="GetInsightHomeSettingsInputMessage"/>
+      <wsdl:output message="GetInsightHomeSettingsOutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="SetLogLevelOption">
+      <wsdl:input message="SetLogLevelOptionInputMessage"/>
+      <wsdl:output message="SetLogLevelOptionOutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetFriendlyName">
+      <wsdl:input message="GetFriendlyNameInputMessage"/>
+      <wsdl:output message="GetFriendlyNameOutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="ReSetup">
+      <wsdl:input message="ReSetupInputMessage"/>
+      <wsdl:output message="ReSetupOutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="SetHomeId">
+      <wsdl:input message="SetHomeIdInputMessage"/>
+      <wsdl:output message="SetHomeIdOutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetHomeId">
+      <wsdl:input message="GetHomeIdInputMessage"/>
+      <wsdl:output message="GetHomeIdOutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetHomeInfo">
+      <wsdl:input message="GetHomeInfoInputMessage"/>
+      <wsdl:output message="GetHomeInfoOutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="SetDeviceId">
+      <wsdl:input message="SetDeviceIdInputMessage"/>
+      <wsdl:output message="SetDeviceIdOutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetDeviceId">
+      <wsdl:input message="GetDeviceIdInputMessage"/>
+      <wsdl:output message="GetDeviceIdOutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetMacAddr">
+      <wsdl:input message="GetMacAddrInputMessage"/>
+      <wsdl:output message="GetMacAddrOutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetSerialNo">
+      <wsdl:input message="GetSerialNoInputMessage"/>
+      <wsdl:output message="GetSerialNoOutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetPluginUDN">
+      <wsdl:input message="GetPluginUDNInputMessage"/>
+      <wsdl:output message="GetPluginUDNOutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetSmartDevInfo">
+      <wsdl:input message="GetSmartDevInfoInputMessage"/>
+      <wsdl:output message="GetSmartDevInfoOutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="ShareHWInfo">
+      <wsdl:input message="ShareHWInfoInputMessage"/>
+      <wsdl:output message="ShareHWInfoOutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeFriendlyName">
+      <wsdl:input message="ChangeFriendlyNameInputMessage"/>
+      <wsdl:output message="ChangeFriendlyNameOutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="SetSmartDevInfo">
+      <wsdl:input message="SetSmartDevInfoInputMessage"/>
+      <wsdl:output message="SetSmartDevInfoOutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetRuleOverrideStatus">
+      <wsdl:input message="GetRuleOverrideStatusInputMessage"/>
+      <wsdl:output message="GetRuleOverrideStatusOutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetDeviceIcon">
+      <wsdl:input message="GetDeviceIconInputMessage"/>
+      <wsdl:output message="GetDeviceIconOutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetIconURL">
+      <wsdl:input message="GetIconURLInputMessage"/>
+      <wsdl:output message="GetIconURLOutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetLogFileURL">
+      <wsdl:input message="GetLogFileURLInputMessage"/>
+      <wsdl:output message="GetLogFileURLOutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeDeviceIcon">
+      <wsdl:input message="ChangeDeviceIconInputMessage"/>
+      <wsdl:output message="ChangeDeviceIconOutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetBinaryState">
+      <wsdl:input message="GetBinaryStateInputMessage"/>
+      <wsdl:output message="GetBinaryStateOutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="SetMultiState">
+      <wsdl:input message="SetMultiStateInputMessage"/>
+      <wsdl:output message="SetMultiStateOutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="SetCrockpotState">
+      <wsdl:input message="SetCrockpotStateInputMessage"/>
+      <wsdl:output message="SetCrockpotStateOutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetCrockpotState">
+      <wsdl:input message="GetCrockpotStateInputMessage"/>
+      <wsdl:output message="GetCrockpotStateOutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetWatchdogFile">
+      <wsdl:input message="GetWatchdogFileInputMessage"/>
+      <wsdl:output message="GetWatchdogFileOutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetSignalStrength">
+      <wsdl:input message="GetSignalStrengthInputMessage"/>
+      <wsdl:output message="GetSignalStrengthOutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="SetServerEnvironment">
+      <wsdl:input message="SetServerEnvironmentInputMessage"/>
+      <wsdl:output message="SetServerEnvironmentOutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetServerEnvironment">
+      <wsdl:input message="GetServerEnvironmentInputMessage"/>
+      <wsdl:output message="GetServerEnvironmentOutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetIconVersion">
+      <wsdl:input message="GetIconVersionInputMessage"/>
+      <wsdl:output message="GetIconVersionOutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetSimulatedRuleData">
+      <wsdl:input message="GetSimulatedRuleDataInputMessage"/>
+      <wsdl:output message="GetSimulatedRuleDataOutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="NotifyManualToggle">
+      <wsdl:input message="NotifyManualToggleInputMessage"/>
+      <wsdl:output message="NotifyManualToggleOutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="ControlCloudUpload">
+      <wsdl:input message="ControlCloudUploadInputMessage"/>
+      <wsdl:output message="ControlCloudUploadOutputMessage"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding type="BasicServicePortType" name="BasicServiceBinding">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="SetBinaryState">
+      <soap:operation soapAction="urn:Belkin:service:basicevent:1#SetBinaryState"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateInsightHomeSettings">
+      <soap:operation soapAction="urn:Belkin:service:basicevent:1#UpdateInsightHomeSettings"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetInsightHomeSettings">
+      <soap:operation soapAction="urn:Belkin:service:basicevent:1#SetInsightHomeSettings"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInsightHomeSettings">
+      <soap:operation soapAction="urn:Belkin:service:basicevent:1#GetInsightHomeSettings"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetLogLevelOption">
+      <soap:operation soapAction="urn:Belkin:service:basicevent:1#SetLogLevelOption"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFriendlyName">
+      <soap:operation soapAction="urn:Belkin:service:basicevent:1#GetFriendlyName"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReSetup">
+      <soap:operation soapAction="urn:Belkin:service:basicevent:1#ReSetup"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetHomeId">
+      <soap:operation soapAction="urn:Belkin:service:basicevent:1#SetHomeId"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHomeId">
+      <soap:operation soapAction="urn:Belkin:service:basicevent:1#GetHomeId"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHomeInfo">
+      <soap:operation soapAction="urn:Belkin:service:basicevent:1#GetHomeInfo"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetDeviceId">
+      <soap:operation soapAction="urn:Belkin:service:basicevent:1#SetDeviceId"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDeviceId">
+      <soap:operation soapAction="urn:Belkin:service:basicevent:1#GetDeviceId"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMacAddr">
+      <soap:operation soapAction="urn:Belkin:service:basicevent:1#GetMacAddr"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSerialNo">
+      <soap:operation soapAction="urn:Belkin:service:basicevent:1#GetSerialNo"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPluginUDN">
+      <soap:operation soapAction="urn:Belkin:service:basicevent:1#GetPluginUDN"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSmartDevInfo">
+      <soap:operation soapAction="urn:Belkin:service:basicevent:1#GetSmartDevInfo"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShareHWInfo">
+      <soap:operation soapAction="urn:Belkin:service:basicevent:1#ShareHWInfo"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeFriendlyName">
+      <soap:operation soapAction="urn:Belkin:service:basicevent:1#ChangeFriendlyName"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSmartDevInfo">
+      <soap:operation soapAction="urn:Belkin:service:basicevent:1#SetSmartDevInfo"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRuleOverrideStatus">
+      <soap:operation soapAction="urn:Belkin:service:basicevent:1#GetRuleOverrideStatus"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDeviceIcon">
+      <soap:operation soapAction="urn:Belkin:service:basicevent:1#GetDeviceIcon"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIconURL">
+      <soap:operation soapAction="urn:Belkin:service:basicevent:1#GetIconURL"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLogFileURL">
+      <soap:operation soapAction="urn:Belkin:service:basicevent:1#GetLogFileURL"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeDeviceIcon">
+      <soap:operation soapAction="urn:Belkin:service:basicevent:1#ChangeDeviceIcon"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBinaryState">
+      <soap:operation soapAction="urn:Belkin:service:basicevent:1#GetBinaryState"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetMultiState">
+      <soap:operation soapAction="urn:Belkin:service:basicevent:1#SetMultiState"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetCrockpotState">
+      <soap:operation soapAction="urn:Belkin:service:basicevent:1#SetCrockpotState"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCrockpotState">
+      <soap:operation soapAction="urn:Belkin:service:basicevent:1#GetCrockpotState"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWatchdogFile">
+      <soap:operation soapAction="urn:Belkin:service:basicevent:1#GetWatchdogFile"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSignalStrength">
+      <soap:operation soapAction="urn:Belkin:service:basicevent:1#GetSignalStrength"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetServerEnvironment">
+      <soap:operation soapAction="urn:Belkin:service:basicevent:1#SetServerEnvironment"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServerEnvironment">
+      <soap:operation soapAction="urn:Belkin:service:basicevent:1#GetServerEnvironment"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIconVersion">
+      <soap:operation soapAction="urn:Belkin:service:basicevent:1#GetIconVersion"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSimulatedRuleData">
+      <soap:operation soapAction="urn:Belkin:service:basicevent:1#GetSimulatedRuleData"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NotifyManualToggle">
+      <soap:operation soapAction="urn:Belkin:service:basicevent:1#NotifyManualToggle"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ControlCloudUpload">
+      <soap:operation soapAction="urn:Belkin:service:basicevent:1#ControlCloudUpload"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="BasicService">
+    <wsdl:port binding="BasicServiceBinding" name="BasicServicePort">
+      <soap:address location="http://192.168.100.8:49153/upnp/control/basicevent1"/>
+    </wsdl:port>
+  </wsdl:service>
 </wsdl:definitions>
