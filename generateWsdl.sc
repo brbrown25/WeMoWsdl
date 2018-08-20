@@ -82,12 +82,13 @@ def refreshWsdl(ip: String @doc("ip address that wemo is available at")) = {
 
   def url(endpoint: String) = s"http://${ip}:49153/${endpoint}"
   val files = Seq(
-    "setup.xml",
-    "eventservice.xml",
-    "metainfoservice.xml",
-    "deviceinfoservice.xml",
-    "insightservice.xml",
-    "manufacture.xml"
+    // "setup.xml",
+    "eventservice.xml"
+    // ,
+    // "metainfoservice.xml",
+    // "deviceinfoservice.xml",
+    // "insightservice.xml",
+    // "manufacture.xml"
   )
 
   import sys.process._
@@ -95,7 +96,7 @@ def refreshWsdl(ip: String @doc("ip address that wemo is available at")) = {
   //  todo, special wsdls
   files.map { f => 
     //remove old definitions
-    rm(root/'f)
+    rm(pwd/f)
     //refetch the file
     Seq(
       "wget",
@@ -141,7 +142,8 @@ def refreshWsdl(ip: String @doc("ip address that wemo is available at")) = {
       """.stripMargin
 
     val p = new PrettyPrinter(100, 2)
-    val out = file"BasicService-${f.replace(".xml", "")}.wsdl"
+    // val out = file"BasicService-${f.replace(".xml", "")}.wsdl"
+    val out = file"BasicService.wsdl"
     out.append(p.format(XML.loadString(body)))
   }
 }
